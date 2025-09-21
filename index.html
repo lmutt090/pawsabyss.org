@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paws Abyss Terraria Server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(#24243e 0%, #302b63 100%);
+            color: #e0e0e0;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #232a36;
+            padding: 30px 20px 20px 20px;
+            text-align: center;
+            border-bottom: 4px solid #6793bb;
+        }
+        header h1 {
+            font-family: 'Verdana', cursive;
+            font-size: 2.8em;
+            color: #a7d129;
+            letter-spacing: 2px;
+            margin: 0;
+            text-shadow: 2px 2px 6px #000;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            background: #3a465e;
+            color: #d1eaff;
+            padding: 10px 30px;
+            margin: 0 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 1px 1px 6px #0007;
+            transition: background 0.2s;
+        }
+        nav a:hover {
+            background: #6793bb;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: rgba(30,40,60,0.95);
+            padding: 30px 25px 40px 25px;
+            border-radius: 14px;
+            box-shadow: 0 6px 32px #000a;
+        }
+        .welcome {
+            font-size: 1.5em;
+            color: #f7e977;
+            text-shadow: 1px 1px 7px #0006;
+        }
+        .server-info {
+            margin-top: 25px;
+            font-size: 1.1em;
+            color: #b3e6ff;
+            background: #212a3c;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 6px solid #6793bb;
+            box-shadow: 0 2px 12px #0006;
+        }
+        .discord-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #738adb;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.15em;
+            font-weight: bold;
+            box-shadow: 0 2px 8px #0004;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .discord-btn:hover {
+            background: #4e5ba7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Paws Abyss Terraria Server</h1>
+    </header>
+    <nav>
+        <a href="">Home</a>
+        <a href="staff">Staff</a>
+        <a href="https://discord.gg/YOUR_INVITE" target="_blank">Discord</a>
+    </nav>
+    <div class="container">
+        <div class="welcome">Welcome to the Paws Abyss Terraria Server!</div>
+        <div class="server-info">
+            <b>Server IP:</b> <span id="server-ip">play.pawsabyss.org</span> <button onclick="copyIP()">Copy</button><br>
+            <b>Version:</b> 1.4.x<br>
+            <b>Status:</b> <span id="status">Checking...</span>
+        </div>
+        <button class="discord-btn" onclick="window.open('https://discord.gg/YOUR_INVITE', '_blank')">Join our Discord</button>
+    </div>
+    <script>
+        // Example: Simulate server status check
+        setTimeout(() => {
+            document.getElementById('status').innerText = 'Online!';
+        }, 1200);
 
+        function copyIP() {
+            const ip = document.getElementById('server-ip').innerText;
+            navigator.clipboard.writeText(ip);
+            alert('Server IP copied: ' + ip);
+        }
+    </script>
+</body>
+</html>
