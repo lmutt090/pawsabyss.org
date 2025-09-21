@@ -1,1 +1,114 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paws Abyss Staff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(#24243e 0%, #302b63 100%);
+            color: #e0e0e0;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #232a36;
+            padding: 24px 20px 16px 20px;
+            text-align: center;
+            border-bottom: 4px solid #6793bb;
+        }
+        header h1 {
+            font-family: 'Verdana', cursive;
+            font-size: 2.2em;
+            color: #7efac8;
+            margin: 0;
+            text-shadow: 2px 2px 6px #000;
+        }
+        nav {
+            margin: 14px 0;
+            text-align: center;
+        }
+        nav a {
+            background: #3a465e;
+            color: #d1eaff;
+            padding: 8px 22px;
+            margin: 0 6px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 1px 1px 6px #0007;
+            transition: background 0.2s;
+        }
+        nav a:hover {
+            background: #6793bb;
+        }
+        .container {
+            max-width: 600px;
+            margin: 35px auto;
+            background: rgba(30,40,60,0.95);
+            padding: 28px 20px 35px 20px;
+            border-radius: 14px;
+            box-shadow: 0 6px 28px #000a;
+        }
+        .staff-card {
+            background: linear-gradient(90deg,#4e5ba7,#7efac8);
+            color: #232a36;
+            padding: 26px 28px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            box-shadow: 0 3px 18px #0007;
+            cursor: pointer;
+            border: 2.5px solid #a7d129;
+            transition: transform 0.17s, box-shadow 0.17s;
+            position: relative;
+        }
+        .staff-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 32px #000b;
+        }
+        .staff-name {
+            font-size: 1.65em;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+        }
+        .staff-role {
+            font-size: 1.12em;
+            font-weight: 600;
+            color: #6793bb;
+        }
+        .badge {
+            background: #a7d129;
+            color: #24243e;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.95em;
+            margin-left: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Paws Abyss Staff</h1>
+    </header>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">Staff</a>
+    </nav>
+    <div class="container">
+        <div class="staff-card" onclick="showFunFact()">
+            <span class="staff-name">Lmutt090 (Lemme)
+                <span class="badge">Server Owner</span>
+            </span>
+            <div class="staff-role">Founder, Developer, and the spirit of the server!</div>
+        </div>
+    </div>
+    <script>
+        function showFunFact() {
+            alert("Fun Fact: Lmutt090 (Lemme) is the creative force behind Paws Abyss and loves building unique gaming experiences for all players!");
+        }
+    </script>
+</body>
+</html>
