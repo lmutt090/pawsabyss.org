@@ -87,6 +87,29 @@
             margin-left: 12px;
             font-weight: bold;
         }
+        .staff-web button {
+            background: linear-gradient(90deg, #6793bb, #7efac8);
+            color: #232a36;
+            font-weight: bold;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0 3px 10px #0007;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .staff-web button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 16px #0009;    
+            background: linear-gradient(90deg, #7efac8, #a7d129);
+        }
+
+        .staff-web button:active {
+            transform: scale(0.96);
+            box-shadow: 0 2px 6px #0008;
+        }
     </style>
 </head>
 <body>
@@ -94,21 +117,42 @@
         <h1>Paws Abyss Staff</h1>
     </header>
     <nav>
-        <a href="../index.html">Home</a>
-        <a href="index.html">Staff</a>
+        <a href="../">Home</a>
+        <a href="">Staff</a>
     </nav>
     <div class="container">
-        <div class="staff-card" onclick="showFunFact()">
+        <div class="staff-card" onclick='showFunFact("", "")'>
             <span class="staff-name">Lmutt090 (Lemme)
                 <span class="badge">Server Owner</span>
             </span>
-            <div class="staff-role">Founder, Developer, and the spirit of the server!</div>
+            <div class="staff-role">Founder, Developer, Host, and the spirit of the server!</div>
+            <div class="staff-web"><button onclick='web("lmutt090.me", "Lemme"'>Website</button></div>
         </div>
     </div>
-    <script>
-        function showFunFact() {
-            alert("Fun Fact: Lmutt090 (Lemme) is the creative force behind Paws Abyss and loves building unique gaming experiences for all players!");
+<script>
+    function showFunFact(person, funfact) {
+        alert("Fun Fact: Lmutt090 (Lemme) is the creative force behind Paws Abyss and loves building unique gaming experiences for all players!");
+    }
+
+    function web(url, person) {
+        if (confirm("Do you want to go to " + person + "'s webpage?")) {
+            window.location.href = url;
         }
-    </script>
+    }
+
+    // Attach proper click handling to stop the fun fact from firing when the button is clicked
+    document.addEventListener("DOMContentLoaded", () => {
+        const staffCard = document.querySelector(".staff-card");
+        const button = staffCard.querySelector("button");
+
+        staffCard.addEventListener("click", showFunFact);
+
+        button.addEventListener("click", (event) => {
+            event.stopPropagation(); // prevent card click from firing
+            web("https://lmutt090.me", "Lmutt090");
+        });
+    });
+</script>
+
 </body>
 </html>
