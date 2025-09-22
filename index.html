@@ -93,23 +93,26 @@
     <nav>
         <a href="">Home</a>
         <a href="staff">Staff</a>
-        <a href="https://discord.gg/YOUR_INVITE" target="_blank">Discord</a>
+        <a href="https://discord.gg/npv4FYmBtN" target="_blank">Discord</a>
     </nav>
     <div class="container">
         <div class="welcome">Welcome to the Paws Abyss Terraria Server!</div>
         <div class="server-info">
             <b>Server IP:</b> <span id="server-ip">play.pawsabyss.org</span> <button onclick="copyIP()">Copy</button><br>
+            <b>Server Port:</b> <span id="server-port">7777</span><br>
             <b>Version:</b> 1.4.x<br>
-            <b>Status:</b> <span id="status">Checking...</span>
+            <b>Status:</b> <span id="status">To be implemented</span>
         </div>
-        <button class="discord-btn" onclick="window.open('https://discord.gg/YOUR_INVITE', '_blank')">Join our Discord</button>
+        <section id="ko-fi-section" style="padding:2rem 1rem;text-align:center;background:#f9f9fa;border-radius:1rem;margin:2rem 0;box-shadow:0 1px 6px #0001;">
+            <h2>Support the server on Ko-fi</h2>
+            <p>If you like the server, consider <a href="https://ko-fi.com/lmutt090" target="_blank" style="color:#29abe0;font-weight:bold;">donating!</a></p>
+            <a href="https://ko-fi.com/lmutt090" target="_blank" rel="noopener">
+                <img src="https://storage.ko-fi.com/cdn/kofi5.png" alt="Donate to us at ko-fi.com" height="40" style="vertical-align:middle;">
+            </a>
+        </section>
+        <button class="discord-btn" onclick="window.open('https://discord.gg/npv4FYmBtN', '_blank')">Join our Discord</button>
     </div>
     <script>
-        // Example: Simulate server status check
-        setTimeout(() => {
-            document.getElementById('status').innerText = 'Online!';
-        }, 1200);
-
         function copyIP() {
             const ip = document.getElementById('server-ip').innerText;
             navigator.clipboard.writeText(ip);
