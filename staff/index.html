@@ -121,19 +121,31 @@
         <a href="">Staff</a>
     </nav>
     <div class="container">
-        <div class="staff-card" id="lmutt090" onclick='showFunFact("Lemme", "Lmutt090 (Lemme) is the creative force behind Paws Abyss and loves building unique gaming experiences for all players!")'>
+        <div class="staff-card" id="lmutt090" onclick='showFunFact("Lemme")'>
             <div class="staff-info">
             <span class="staff-name">Lmutt090 (Lemme)
                 <span class="badge">Server Owner</span>
             </span>
-            <div class="staff-role">Founder, Developer, Host, and the spirit of the server!</div>
+            <div class="staff-role">Founder and Host!</div>
             </div>
             <div class="staff-web"><button onclick='web("lmutt090.me", "Lemme")'>Website</button></div>
         </div>
     </div>
 <script>
     function showFunFact(person, funfact) {
-        alert(person + "'s Fun Fact: " + funfact);
+        if (funfact) {
+            if (person) {
+                console.log(person + "'s Fun Fact: " + funfact)
+                alert(person + "'s Fun Fact: " + funfact);
+            } else {
+                console.error("Filled: funfact (" + funfact + ")\nNot filled: person")
+            }
+        } if (person) {
+            console.warn("Filled: Person (" + person + ")\nNot filled: funfact")
+            alert(person + "Doesn't have a fun fact")
+        } else {
+            console.error("This isn't setup")
+        }
     }
 
     function web(url, person) {
