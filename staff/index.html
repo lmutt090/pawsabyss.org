@@ -121,17 +121,19 @@
         <a href="">Staff</a>
     </nav>
     <div class="container">
-        <div class="staff-card" onclick='showFunFact("", "")'>
+        <div class="staff-card" id="lmutt090" onclick='showFunFact("Lemme", "Lmutt090 (Lemme) is the creative force behind Paws Abyss and loves building unique gaming experiences for all players!")'>
+            <div class="staff-info">
             <span class="staff-name">Lmutt090 (Lemme)
                 <span class="badge">Server Owner</span>
             </span>
             <div class="staff-role">Founder, Developer, Host, and the spirit of the server!</div>
-            <div class="staff-web"><button onclick='web("lmutt090.me", "Lemme"'>Website</button></div>
+            </div>
+            <div class="staff-web"><button onclick='web("lmutt090.me", "Lemme")'>Website</button></div>
         </div>
     </div>
 <script>
     function showFunFact(person, funfact) {
-        alert("Fun Fact: Lmutt090 (Lemme) is the creative force behind Paws Abyss and loves building unique gaming experiences for all players!");
+        alert(person + "'s Fun Fact: " + funfact);
     }
 
     function web(url, person) {
@@ -139,19 +141,6 @@
             window.location.href = url;
         }
     }
-
-    // Attach proper click handling to stop the fun fact from firing when the button is clicked
-    document.addEventListener("DOMContentLoaded", () => {
-        const staffCard = document.querySelector(".staff-card");
-        const button = staffCard.querySelector("button");
-
-        staffCard.addEventListener("click", showFunFact);
-
-        button.addEventListener("click", (event) => {
-            event.stopPropagation(); // prevent card click from firing
-            web("https://lmutt090.me", "Lmutt090");
-        });
-    });
 </script>
 
 </body>
