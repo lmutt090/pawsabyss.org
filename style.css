@@ -1,79 +1,81 @@
 body {
-    background: linear-gradient(#24243e 0%, #302b63 100%);
-    color: #e0e0e0;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    font-family: Consolas, monospace;
     margin: 0;
-    padding: 0;
+    padding: 2em;
+    line-height: 1.6;
 }
 header {
-    background: #232a36;
-    padding: 30px 20px 20px 20px;
+    background: #222;
+    padding: 20px;
     text-align: center;
-    border-bottom: 4px solid #6793bb;
+    border-bottom: 4px solid #AA00FF;
 }
 header h1 {
-    font-family: 'Verdana', cursive;
-    font-size: 2.8em;
-    color: #a7d129;
-    letter-spacing: 2px;
+    font-family: 'Consolas', monospace;
+    font-size: 2.5em;
+    color: #FFFF00;
+    letter-spacing: 1px;
     margin: 0;
-    text-shadow: 2px 2px 6px #000;
+    text-shadow: 1px 1px 4px #000;
 }
 nav {
     margin: 20px 0;
     text-align: center;
 }
 nav a {
-    background: #3a465e;
-    color: #d1eaff;
-    padding: 10px 30px;
-    margin: 0 8px;
-    border-radius: 8px;
+    background: #333;
+    color: #eee;
+    padding: 8px 25px;
+    margin: 0 5px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 1px 1px 6px #0007;
+    box-shadow: 1px 1px 4px #0008;
     transition: background 0.2s;
 }
 nav a:hover {
-    background: #6793bb;
+    background: #AA00FF;
+    color: #fff;
 }
 .container {
     max-width: 700px;
     margin: 40px auto;
-    background: rgba(30,40,60,0.95);
-    padding: 30px 25px 40px 25px;
-    border-radius: 14px;
-    box-shadow: 0 6px 32px #000a;
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px #000a;
 }
 .welcome {
-    font-size: 1.5em;
-    color: #f7e977;
-    text-shadow: 1px 1px 7px #0006;
+    font-size: 1.4em;
+    color: #FFFF00;
+    text-shadow: 1px 1px 4px #0006;
 }
 .server-info {
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 1.1em;
-    color: #b3e6ff;
-    background: #212a3c;
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 6px solid #6793bb;
-    box-shadow: 0 2px 12px #0006;
+    color: #eee;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 6px solid #AA00FF;
+    box-shadow: 0 2px 10px #0006;
 }
 .discord-btn {
     display: inline-block;
-    margin-top: 30px;
-    padding: 14px 30px;
-    background: #738adb;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #FF00AA;
     color: #fff;
     border: none;
-    border-radius: 8px;
-    font-size: 1.15em;
+    border-radius: 6px;
+    font-size: 1.1em;
     font-weight: bold;
-    box-shadow: 0 2px 8px #0004;
+    box-shadow: 0 2px 6px #0004;
     cursor: pointer;
     transition: background 0.2s;
 }
 .discord-btn:hover {
-    background: #4e5ba7;
+    background: #FF33C8;
 }
