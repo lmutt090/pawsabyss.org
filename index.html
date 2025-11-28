@@ -18,10 +18,10 @@
     <div class="container">
         <div class="welcome">Welcome to the Paws Abyss Terraria Server!</div>
         <div class="server-info">
-            <b>Server IP:</b> <span id="server-ip">play.pawsabyss.org</span> <button onclick="copyIP()">Copy</button><br>
+            <b>Server IP:</b> <span id="server-ip">play.pawsabyss.org</span> <button onclick="copyIP('3850.d6.gl.ply.gg')">Copy</button><br>
             <b>Server Port:</b> <span id="server-port">7777</span><br>
             <b>Version:</b> 1.4.x<br>
-            <b>Status:</b> <span id="status">Offline till further notice</span>
+            <b>Status:</b> <span id="status">Working</span>
         </div>
         <section id="ko-fi-section">
             <h2>Support the server on Ko-fi</h2>
@@ -33,8 +33,7 @@
         <button class="discord-btn" onclick="window.open('https://discord.gg/npv4FYmBtN', '_blank')">Join our Discord</button>
     </div>
     <script>
-        function copyIP() {
-            const ip = document.getElementById('server-ip').innerText;
+        function copyIP(ip) {
             navigator.clipboard.writeText(ip);
             alert('Server IP copied: ' + ip);
         }
